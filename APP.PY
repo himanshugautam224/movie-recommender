@@ -1,3 +1,14 @@
+import gdown, os
+
+url = "https://drive.google.com/uc?export=download&id=1xHYn_kPo5eu82_g6oTo2KkfzVYQIUCEX"
+output = "similarity.pkl"
+
+if not os.path.exists(output):
+    print("Downloading model file from Google Drive...")
+    gdown.download(url, output, quiet=False)
+else:
+    print("Model file already exists.")
+
 import tkinter as tk
 from tkinter import ttk, messagebox
 import pickle
